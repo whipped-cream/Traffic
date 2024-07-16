@@ -5,13 +5,13 @@ This is a little Godot project that I made to learn Godot. It just makes a few l
 I intend to add a feature that will ensure that the animation loops so that the video that is exported can be set up as a live wallpaper with any live wallpaper manager that can handle video files but I haven't gotten around to that yet, so stay tuned!
 
 ## Screenshots
-![](screenshots/1.png)
+![](Screenshots/1.png?raw=true)
 Some cars here and there
 
-![](screenshots/2.png)
+![](Screenshots/2.png?raw=true)
 A very busy day!
 
-![](screenshots/3.png)
+![](Screenshots/3.png?raw=true)
 A different background colour
 
 ## Thoughts on Godot
