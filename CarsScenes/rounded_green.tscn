@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds76227ekigl8"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_hje4r"]
+[ext_resource type="Texture2D" uid="uid://35jd5v8478od" path="res://Cars/rounded_green.png" id="2_2ns3v"]
+
+[node name="RoundedGreen" instance=ExtResource("1_hje4r")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-32, -15)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_2ns3v")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(1.66893e-06, -1)
+scale = Vector2(3.2, 1.6)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-32, -17)

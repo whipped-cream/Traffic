@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg1o35ly4qvkw"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_dc0du"]
+[ext_resource type="Texture2D" uid="uid://bg10yqdcth1jj" path="res://Cars/suv_military.png" id="2_je5gp"]
+
+[node name="SUVMilitary" instance=ExtResource("1_dc0du")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-28, -16)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_je5gp")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-4.76837e-07, -9.53674e-07)
+scale = Vector2(2.8, 1.6)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-28, -16)

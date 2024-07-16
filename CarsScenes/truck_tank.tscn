@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx0niqdorvl17"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_xuvjp"]
+[ext_resource type="Texture2D" uid="uid://qgnhrcv3oc2l" path="res://Cars/trucktank.png" id="2_svya2"]
+
+[node name="TruckTank" instance=ExtResource("1_xuvjp")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-65, -26)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_svya2")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-3.33786e-06, 0.999998)
+scale = Vector2(6.5, 2.5)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-65, -24)

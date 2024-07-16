@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3h1axdj34bji"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_gaidk"]
+[ext_resource type="Texture2D" uid="uid://dvlecrcrvnboo" path="res://Cars/truckdelivery.png" id="2_u8w85"]
+
+[node name="TruckDelivery" instance=ExtResource("1_gaidk")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-44, -26)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_u8w85")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-4.29153e-06, 1)
+scale = Vector2(4.4, 2.5)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-44, -24)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhnnkrl3hdhw4"]
+
+[ext_resource type="PackedScene" uid="uid://bfow7y0tlsiye" path="res://vehicle_with_trailer.tscn" id="1_wuqaw"]
+[ext_resource type="Script" path="res://CarsScenes/truck_trailer.gd" id="2_2eu7r"]
+
+[node name="TruckTrailer" instance=ExtResource("1_wuqaw")]
+script = ExtResource("2_2eu7r")
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-40, -25)
+
+[node name="Trailer" parent="Marker2D/VehicleBody" index="0"]
+position = Vector2(-32.5, 0.5)
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-36.5, 0.499999)
+scale = Vector2(7.65, 2.45)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-113, -24)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0obmd1whohah"]
+
+[ext_resource type="Script" path="res://Lane.gd" id="1_h6a3d"]
+
+[node name="Lane" type="Node2D"]
+script = ExtResource("1_h6a3d")
+
+[node name="Temp" type="Node2D" parent="."]

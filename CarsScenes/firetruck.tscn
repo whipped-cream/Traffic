@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c252g3lja3si2"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_qqvsc"]
+[ext_resource type="Texture2D" uid="uid://b4m46f45q46d7" path="res://Cars/firetruck.png" id="2_4sl04"]
+
+[node name="Firetruck" instance=ExtResource("1_qqvsc")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-44, -24)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_4sl04")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-4.29153e-06, 0)
+scale = Vector2(4.4, 2.4)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-44, -24)

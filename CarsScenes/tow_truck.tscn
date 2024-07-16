@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqo3cyrdxqged"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_124v7"]
+[ext_resource type="Texture2D" uid="uid://b83iqcim77g2g" path="res://Cars/towtruck.png" id="2_ks6ov"]
+
+[node name="TowTruck" instance=ExtResource("1_124v7")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-45, -22)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_ks6ov")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(1.66893e-06, 2)
+scale = Vector2(4.5, 2)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-45, -18)

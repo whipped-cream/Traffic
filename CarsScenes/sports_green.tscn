@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjgcxhn7ogxac"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_byn2c"]
+[ext_resource type="Texture2D" uid="uid://d34cw7kv6fbto" path="res://Cars/sports_green.png" id="2_dnl2j"]
+
+[node name="SportsGreen" instance=ExtResource("1_byn2c")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-29, -13)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+position = Vector2(0, 0)
+texture = ExtResource("2_dnl2j")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(4.76837e-07, 0.999999)
+scale = Vector2(2.9, 1.2)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-29, -10)

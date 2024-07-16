@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbhhkl6yanxh1"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_bntaa"]
+[ext_resource type="Texture2D" uid="uid://keey01d4olxs" path="res://Cars/van_large.png" id="2_68aj0"]
+
+[node name="VanLarge" instance=ExtResource("1_bntaa")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-35, -21)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_68aj0")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(2.38419e-06, -1.5)
+scale = Vector2(3.5, 2.25)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-35, -24)

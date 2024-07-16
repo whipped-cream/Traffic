@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkbbkc0hi0khi"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_efbpk"]
+[ext_resource type="Texture2D" uid="uid://brmouhplh4ru8" path="res://Cars/buggy.png" id="2_urnji"]
+[ext_resource type="Script" path="res://vehicle_with_head.gd" id="2_urwni"]
+[ext_resource type="Texture2D" uid="uid://wnn5j2qgt2he" path="res://Characters/man_kart.png" id="3_heqtu"]
+[ext_resource type="Texture2D" uid="uid://6b3xa4272lrg" path="res://Characters/woman_kart.png" id="4_y3lke"]
+
+[node name="VehicleWithHead" instance=ExtResource("1_efbpk")]
+script = ExtResource("2_urwni")
+heads = [ExtResource("3_heqtu"), ExtResource("4_y3lke")]
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+position = Vector2(0, 0)
+texture = ExtResource("2_urnji")
+
+[node name="Head" type="Sprite2D" parent="Marker2D/VehicleBody" index="0"]
+position = Vector2(-2.5, -1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_heqtu")

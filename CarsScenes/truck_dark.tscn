@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcb1r3hk4frr0"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_guahy"]
+[ext_resource type="Texture2D" uid="uid://n4quagxl54sf" path="res://Cars/truckdark.png" id="2_7ii4i"]
+
+[node name="TruckDark" instance=ExtResource("1_guahy")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-40, -24)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_7ii4i")
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-40, -24)

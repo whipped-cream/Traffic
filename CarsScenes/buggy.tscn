@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://fqykionse05l"]
+
+[ext_resource type="PackedScene" uid="uid://bkbbkc0hi0khi" path="res://vehicle_with_head.tscn" id="1_4w2wm"]
+
+[node name="Buggy" instance=ExtResource("1_4w2wm")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-23, -16)
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(1.90735e-06, 1.5)
+scale = Vector2(2.3, 1.45)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-23, -13)

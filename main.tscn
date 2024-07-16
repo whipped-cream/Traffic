@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctu1nd5x7jrsg"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_1qup1"]
+[ext_resource type="PackedScene" uid="uid://cdtspy5dwrkoq" path="res://lane_holder.tscn" id="3_q1nlu"]
+[ext_resource type="PackedScene" uid="uid://cfesndis3wmsn" path="res://controls.tscn" id="3_uq0jk"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_1qup1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.572549, 0.823529, 0.909804, 1)
+
+[node name="Controls" parent="ColorRect" instance=ExtResource("3_uq0jk")]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 64.0
+offset_right = -1552.0
+offset_bottom = -888.0
+
+[node name="LaneHolder1" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 464)
+
+[node name="LaneHolder2" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 520)
+
+[node name="LaneHolder3" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 576)
+
+[node name="LaneHolder4" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 632)
+
+[node name="LaneHolder5" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 688)
+
+[node name="LaneHolder6" parent="ColorRect" instance=ExtResource("3_q1nlu")]
+position = Vector2(0, 744)
+
+[connection signal="background_colour_changed" from="ColorRect/Controls" to="." method="_on_controls_background_colour_changed"]
+[connection signal="lane_count_changed" from="ColorRect/Controls" to="." method="_on_controls_lane_count_changed"]
+[connection signal="sidewalk_enabled_changed" from="ColorRect/Controls" to="." method="_on_controls_sidewalk_enabled_changed"]
+[connection signal="traffic_density_changed" from="ColorRect/Controls" to="." method="_on_controls_traffic_density_changed"]

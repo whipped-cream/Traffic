@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://30yyxy6by0wc"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_mihfl"]
+[ext_resource type="Texture2D" uid="uid://0l7e3sjhwq1k" path="res://Cars/suv_travel.png" id="2_iwnri"]
+
+[node name="SUVTravel" instance=ExtResource("1_mihfl")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-32, -18)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_iwnri")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(0, 1)
+scale = Vector2(3.2, 1.7)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-32, -16)

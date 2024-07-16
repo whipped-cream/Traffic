@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://gwtowxoe0gp4"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_bbfo6"]
+[ext_resource type="Texture2D" uid="uid://cc82j78wcp5oa" path="res://Cars/police.png" id="2_hkps7"]
+
+[node name="Police" instance=ExtResource("1_bbfo6")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-33, -16)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_hkps7")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(7.15256e-07, 2)
+scale = Vector2(3.3, 1.4)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-33, -12)

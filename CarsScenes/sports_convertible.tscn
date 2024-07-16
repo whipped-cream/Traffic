@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccy22fkm0vgkd"]
+
+[ext_resource type="PackedScene" uid="uid://bkbbkc0hi0khi" path="res://vehicle_with_head.tscn" id="1_hk0vp"]
+[ext_resource type="Script" path="res://CarsScenes/sports_convertible.gd" id="2_v5gt8"]
+[ext_resource type="Texture2D" uid="uid://c38xxd1xnml6r" path="res://Characters/man_convertible.png" id="3_kgccb"]
+[ext_resource type="Texture2D" uid="uid://drw1on1e7tfnt" path="res://Characters/woman_convertible.png" id="4_ppsse"]
+[ext_resource type="Texture2D" uid="uid://ct51sinrxdlwi" path="res://Cars/sports_convertible.png" id="5_hkm4c"]
+
+[node name="SportsConvertible" instance=ExtResource("1_hk0vp")]
+script = ExtResource("2_v5gt8")
+heads = [ExtResource("3_kgccb"), ExtResource("4_ppsse")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-33, -12)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("5_hkm4c")
+
+[node name="PassengerHead" type="Sprite2D" parent="Marker2D/VehicleBody" index="0"]
+position = Vector2(-0.9, -3.85)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ppsse")
+
+[node name="Head" parent="Marker2D/VehicleBody" index="1"]
+position = Vector2(-4.5, -3.85)
+texture = ExtResource("3_kgccb")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(7.15256e-07, -6)
+scale = Vector2(3.3, 1.8)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-33, -24)

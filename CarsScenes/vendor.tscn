@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxeshf6jn5owx"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_qhqs6"]
+[ext_resource type="Texture2D" uid="uid://cgu6j4m1seqal" path="res://Cars/vendor.png" id="2_tom0q"]
+
+[node name="Vendor" instance=ExtResource("1_qhqs6")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-38, -24)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_tom0q")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-2.38419e-06, 2)
+scale = Vector2(3.8, 2.2)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-38, -20)

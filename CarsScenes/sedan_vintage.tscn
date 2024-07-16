@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgvwy308spn3a"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_7v2e3"]
+[ext_resource type="Texture2D" uid="uid://vo5afdw1ffuq" path="res://Cars/sedan_vintage.png" id="2_fro6f"]
+
+[node name="SedanVintage" instance=ExtResource("1_7v2e3")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-29, -15)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+position = Vector2(-7, 0.804389)
+texture = ExtResource("2_fro6f")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-7, -0.5)
+scale = Vector2(3.6, 1.55)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-43, -16)

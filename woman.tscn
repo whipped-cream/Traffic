@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://es6qj70kp47y"]
+
+[ext_resource type="Texture2D" uid="uid://b04evefgns0bd" path="res://Characters/woman.png" id="1_nfafn"]
+[ext_resource type="Script" path="res://woman.gd" id="1_x2w0m"]
+[ext_resource type="Texture2D" uid="uid://b25wfevf5ot2x" path="res://Characters/woman_fall.png" id="2_o8dli"]
+[ext_resource type="Texture2D" uid="uid://cjleo5q5m52rs" path="res://Characters/woman_down.png" id="3_ge81g"]
+[ext_resource type="Texture2D" uid="uid://dr1txydk6x2d6" path="res://Characters/woman_point.png" id="4_ftkm3"]
+[ext_resource type="Texture2D" uid="uid://b1wx4hlnaxe2g" path="res://Characters/woman_walk1.png" id="5_cltym"]
+[ext_resource type="Texture2D" uid="uid://cxy78kmg1865p" path="res://Characters/woman_walk2.png" id="6_p8q7b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpla8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nfafn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o8dli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ge81g")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ftkm3")
+}],
+"loop": true,
+"name": &"point",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nfafn")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cltym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p8q7b")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Woman" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_x2w0m")
+metadata/_edit_group_ = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
+position = Vector2(-11, 0)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_vpla8")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.0267318
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Marker2D"]
+position = Vector2(-11, 0)
+scale = Vector2(1.1, 1.1)
+
+[connection signal="screen_exited" from="Marker2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

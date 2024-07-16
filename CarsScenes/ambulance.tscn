@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0h60tu8dwr6l"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_s67fr"]
+[ext_resource type="Texture2D" uid="uid://c7n6keuswml08" path="res://Cars/ambulance.png" id="2_0vqqy"]
+
+[node name="Ambulance" instance=ExtResource("1_s67fr")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-40, -24)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_0vqqy")
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-40, -24)

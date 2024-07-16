@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bixdmkstprioy"]
+
+[ext_resource type="PackedScene" uid="uid://bkbbkc0hi0khi" path="res://vehicle_with_head.tscn" id="1_v3dog"]
+[ext_resource type="Texture2D" uid="uid://b8umt2moop1uu" path="res://Characters/man_cycle.png" id="2_cfqwa"]
+[ext_resource type="Texture2D" uid="uid://x0rhl06lik3u" path="res://Characters/woman_cycle.png" id="3_xyy46"]
+[ext_resource type="Texture2D" uid="uid://dwysla4lgu2jw" path="res://Cars/cycle.png" id="4_ehe2b"]
+
+[node name="Cycle" instance=ExtResource("1_v3dog")]
+heads = [ExtResource("2_cfqwa"), ExtResource("3_xyy46")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-16, -11)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("4_ehe2b")
+
+[node name="Head" parent="Marker2D/VehicleBody" index="0"]
+position = Vector2(0, -2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_cfqwa")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-9.53674e-07, -1)
+scale = Vector2(1.6, 1.2)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-16, -13)

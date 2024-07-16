@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://chxy6plg4im7s"]
+
+[ext_resource type="Script" path="res://man.gd" id="1_caxo3"]
+[ext_resource type="Texture2D" uid="uid://bsgk1dphbcxtk" path="res://Characters/man.png" id="1_efqi0"]
+[ext_resource type="Texture2D" uid="uid://chb7fc71rtjdj" path="res://Characters/man_fall.png" id="2_b2i6r"]
+[ext_resource type="Texture2D" uid="uid://ccjf43i562uod" path="res://Characters/man_down.png" id="3_mavye"]
+[ext_resource type="Texture2D" uid="uid://cdvmufunqgh16" path="res://Characters/man_point.png" id="4_ktpq7"]
+[ext_resource type="Texture2D" uid="uid://dafuo6nn8ymko" path="res://Characters/man_walk1.png" id="4_ut8jj"]
+[ext_resource type="Texture2D" uid="uid://f1k6sde6leh8" path="res://Characters/man_walk2.png" id="5_68kyk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rg7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_efqi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b2i6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mavye")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_efqi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ktpq7")
+}],
+"loop": false,
+"name": &"point",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_efqi0")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ut8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_68kyk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Man" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_caxo3")
+metadata/_edit_group_ = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Marker2D"]
+position = Vector2(-11, 0)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_7rg7k")
+animation = &"fall"
+autoplay = "walk"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Marker2D"]
+position = Vector2(-11, 0)
+scale = Vector2(1.1, 1.1)
+
+[connection signal="screen_exited" from="Marker2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

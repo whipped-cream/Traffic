@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh0aut4o35okh"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_nuxyx"]
+[ext_resource type="Texture2D" uid="uid://bnhkahgrrs5yt" path="res://Cars/taxi.png" id="2_co61n"]
+
+[node name="Taxi" instance=ExtResource("1_nuxyx")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-33, -16)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_co61n")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(-2.14577e-06, -9.53674e-07)
+scale = Vector2(3.3, 1.6)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-33, -16)

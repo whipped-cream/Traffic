@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ynqenks8pw27"]
+
+[ext_resource type="PackedScene" uid="uid://dwpjq4o5hkwem" path="res://vehicle.tscn" id="1_nchga"]
+[ext_resource type="Texture2D" uid="uid://badr6ice71hf7" path="res://Cars/hotdog.png" id="2_tu2rb"]
+
+[node name="Hotdog" instance=ExtResource("1_nchga")]
+
+[node name="Marker2D" parent="." index="0"]
+position = Vector2(-40, -31)
+
+[node name="VehicleBody" parent="Marker2D" index="0"]
+texture = ExtResource("2_tu2rb")
+
+[node name="VisibleOnScreenNotifier2D" parent="Marker2D" index="1"]
+position = Vector2(0, 2)
+scale = Vector2(4, 2.9)
+
+[node name="EndMarker" parent="Marker2D" index="3"]
+position = Vector2(-40, -27)
